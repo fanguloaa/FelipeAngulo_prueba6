@@ -212,7 +212,7 @@ public class Categorias extends javax.swing.JInternalFrame {
         try {
             categoria.ingresarCategoria(idCategoria, nombreCategoria, descripcionCategoria);
             limpiarTabla();
-            JOptionPane.showMessageDialog(null, "Ingreado con éxito", "Ingreso Categoría",
+            JOptionPane.showMessageDialog(null, "Ingresado con éxito", "Ingreso Categoría",
                     JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception e) {
         }
@@ -220,7 +220,7 @@ public class Categorias extends javax.swing.JInternalFrame {
         limpiar();
             
         }else{
-            JOptionPane.showMessageDialog(null, "No Ingreado", "Ingreso Categoría",
+            JOptionPane.showMessageDialog(null, "No Ingresado", "Ingreso Categoría",
                     JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
@@ -286,6 +286,8 @@ public class Categorias extends javax.swing.JInternalFrame {
         txtNombreCategoria.setText(nombreCategoria);
         String descripcionCategoria = String.valueOf(tm.getValueAt(fila, 2));
         txtDescripcionCategoria.setText(descripcionCategoria);
+        
+        txtIdCategoria.setEditable(false);
     }//GEN-LAST:event_tblCategoriasMouseClicked
 
 
@@ -324,6 +326,7 @@ public class Categorias extends javax.swing.JInternalFrame {
         txtIdCategoria.setText("");
         txtNombreCategoria.setText("");
         txtDescripcionCategoria.setText("");
+        txtIdCategoria.setEditable(true);
         fila = -1;
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables

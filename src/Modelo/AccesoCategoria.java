@@ -44,7 +44,6 @@ public class AccesoCategoria extends Conexion{
         try {
             super.getStmt();
             stmt.executeUpdate("Update categoria set "
-                    + "idCategoria="+idCategoria+","
                     + "nombreCategoria='"+nombreCategoria+"',"
                     + "descripcionCategoria='"+descripcionCategoria+"' where idCategoria="+idCategoria);
             System.out.println("Actualizado con exito!");

@@ -54,7 +54,6 @@ public class AccesoLibro extends Conexion{
         try {
             super.getStmt();
             stmt.executeUpdate("Update libro set "
-                    + "idLibro="+idLibro+","
                     + "nombreLibro='"+nombreLibro+"',"
                     + "autorLibro='"+autorLibro+"',"
                     + "editorial='"+editorial+"',"

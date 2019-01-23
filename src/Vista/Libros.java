@@ -245,7 +245,7 @@ public class Libros extends javax.swing.JInternalFrame {
                     ejemplares,categoria.getIdCategoria());
             limpiarTabla();
             tblLibros.setModel(tm);
-            JOptionPane.showMessageDialog(null, "Ingreado con éxito", "Ingreso Categoría",
+            JOptionPane.showMessageDialog(null, "Ingresado con éxito", "Ingreso Categoría",
                     JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception e) {
         }
@@ -253,7 +253,7 @@ public class Libros extends javax.swing.JInternalFrame {
         limpiar();
             
         }else{
-            JOptionPane.showMessageDialog(null, "No Ingreado", "Ingreso Categoría",
+            JOptionPane.showMessageDialog(null, "No Ingresado", "Ingreso Categoría",
                     JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
@@ -282,7 +282,6 @@ public class Libros extends javax.swing.JInternalFrame {
          try {
             libro.actualizarLibro(idLibro, nombreLibro, autorLibro, editorial,
                     ejemplares, categoria.getIdCategoria());
-            /*tblLibros.setModel(tm);*/
             cargarTabla();
             limpiar();
             limpiarTabla();
@@ -338,6 +337,8 @@ public class Libros extends javax.swing.JInternalFrame {
         txtEjemplares.setText(ejemplares);
         String categoria = String.valueOf(tm.getValueAt(fila, 5));
         cmbCategorias.setSelectedItem(compararObjeto(categoria));
+        
+        txtIdLibro.setEditable(false);
     }//GEN-LAST:event_tblLibrosMouseClicked
 
 
@@ -384,6 +385,7 @@ public class Libros extends javax.swing.JInternalFrame {
         txtEditorial.setText("");
         txtEjemplares.setText("");
         cmbCategorias.setSelectedIndex(0);
+        txtIdLibro.setEditable(true);
         
         fila = -1;
     }
